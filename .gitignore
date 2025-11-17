@@ -1,0 +1,52 @@
+# Arquivos de sistema e de cache
+.DS_Store
+Thumbs.db
+ehthumbs.db
+.cache
+.project
+.settings
+*.swp
+*.swo
+
+# Python (Geral)
+# Arquivos de bytecode compilado
+*.pyc
+*.pyd
+*.pyo
+
+# Diretórios de cache e logs de testes
+__pycache__/
+pip-log.txt
+htmlcov/
+.coverage
+.mypy_cache/
+.pytest_cache/
+
+# Arquivos de configuração e temporários do VS Code
+.vscode/
+
+# Arquivos de log e temporários
+*.log
+*.tmp
+temp/
+tmp/
+*.bak
+*.old
+
+# Arquivos de upload e de dados sensíveis
+uploads/
+/public/uploads/
+
+# Arquivos de banco de dados (Locais)
+*.sql
+*.sqlite
+*.db
+
+# Pastas de dependências de projetos (Não-Python)
+/node_modules
+/vendor
+
+# Dependências Python (O Poetry/Pipenv/Venv já geram isso)
+.venv/
+
+workout_api/__pycache__/
