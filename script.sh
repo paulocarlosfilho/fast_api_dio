@@ -49,4 +49,9 @@ echo "Acessando o módulo: $APP_MODULE"
 echo "Servidor rodando em http://127.0.0.1:8000 (Ctrl+C para sair)"
 
 # 4.1 Inicia o servidor Uvicorn no ambiente virtual
-poetry run uvicorn "$APP_MODULE" --reload
+poetry run uvicorn workout_api.main:app --reload
+
+
+#Ele ja instalado. Depois de ja ter feito tudo:
+#Flake8 Black, import cost
+uvicorn workout_api.main:app --reload
