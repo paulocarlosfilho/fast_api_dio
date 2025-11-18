@@ -2,7 +2,7 @@ from fastapi import FastAPI
 
 
 # Instância da aplicação
-app = FastAPI(title = "WorkoutApi")
+app = FastAPI(title="WorkoutApi")
 
 
 if __name__ == 'main':
