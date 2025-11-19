@@ -55,3 +55,29 @@ poetry run uvicorn workout_api.main:app --reload
 #Ele ja instalado. Depois de ja ter feito tudo:
 #Flake8 Black, import cost
 uvicorn workout_api.main:app --reload
+
+
+# Criar os requiriments.txt
+ # pip freeze > requiriments.txt
+
+
+# run:
+ # 	@uvicorn workout_api.main:app --reload
+
+# create-migration:
+ # 	@PYTHONPATH=$PYUTHONPATH:$(pwd) alembic revision --autogenerate -m $(d)
+
+# run-migration:
+ # 	@PYTHONPATH=$PYUTHONPATH:$(pwd) alembic upgrade head
+
+
+# Criar os requerimentos
+ #pip freeze > requiriments.txt
+
+
+#Rodar
+ #make run
+
+
+#Criar migratçoes
+ # make create-migration d="init-db"
