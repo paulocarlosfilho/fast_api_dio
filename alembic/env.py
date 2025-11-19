@@ -7,7 +7,11 @@ from sqlalchemy import pool
 
 from alembic import context
 from workout_api.contrib.models import BaseModel
-from workout_api.centro_de_treinamento.models import *
+
+
+from workout_api.categoria.models import CategoriaModel
+from workout_api.centro_de_treinamento.models import CentroTreinamentoModel
+from workout_api.atleta.models import AtletaModel
 
 
 config = context.config
