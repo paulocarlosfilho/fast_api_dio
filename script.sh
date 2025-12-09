@@ -57,6 +57,8 @@ poetry run uvicorn workout_api.main:app --reload
 uvicorn workout_api.main:app --reload
 
 
+# pip install pydantic-settings
+
 # Criar os requiriments.txt
  # pip freeze > requiriments.txt
 

@@ -2,10 +2,26 @@ version: "3"
 services:
   db:
     image: postgres:11-alpine
+    container_name: fast_api_dio-db-1
     environment:
       POSTGRES_PASSWORD: workout
       POSTGRES_USER: workout
       POSTGRES_DB: workout
-
     ports:
       - "5432:5432"
+
+  api:
+    build: .
+    container_name: fast_api_dio-api-1
+    command: python -m uvicorn workout_api.main:app --host 0.0.0.0 --port 8000 --reload
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    # O volume abaixo mapeia o código local para o container,
+    # permitindo o hot-reload (--reload no comando)
+    volumes:
+      - .:/app
+    # Conecta o serviço api ao mesmo banco de dados do db
+    environment:
+      DATABASE_URL: postgresql+asyncpg://workout:workout@db:5432/workout
